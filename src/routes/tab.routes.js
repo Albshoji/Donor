@@ -10,6 +10,7 @@ const Tab = createBottomTabNavigator();
 
 import { Advice } from "../screens/advice"
 import { Notice } from "../screens/notice"
+import { Rewards } from "../screens/rewards"
 import { Profile } from "../screens/profile"
 import { StackCollection } from "./stack.routes";
 
@@ -61,6 +62,14 @@ function TabsRoutes() {
         options={{
           title: "Notificação",
           tabBarIcon: ({ color }) => ( <SimpleIcon name="bell" color={color} size={Size28} />),
+        }}
+      />
+      <Tab.Screen 
+        name="Rewards" 
+        component={Rewards} 
+        options={{
+          title: "Ranking",
+          tabBarIcon: ({ color }) => ( <SimpleIcon name="trophy" color={color} size={Size28} />),
         }}
       />
     </Tab.Navigator>
